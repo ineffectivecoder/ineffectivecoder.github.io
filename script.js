@@ -172,9 +172,11 @@ const commands = {
   Cobalt Strike, Impacket, BloodHound, Rubeus, Mimikatz
   Burp Suite, Nmap, CrackMapExec, Responder
 
+<span class="neofetch-label">Languages:</span>
+  <span class="dir">Python</span>, <span class="dir">C</span>, <span class="dir">Go</span>, <span class="dir">Bash</span>
+
 <span class="neofetch-label">Other:</span>
   Windows internals, Linux administration
-  Python, C, Go, Bash
   C2 infrastructure, custom implant development
 
 <span class="output-info">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>`;
