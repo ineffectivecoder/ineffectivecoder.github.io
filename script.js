@@ -163,13 +163,18 @@ const commands = {
   <span class="dir">Red Team Ops</span> - Full adversary simulation
   <span class="dir">Network Pentesting</span> - Internal/external assessments
 
+<span class="neofetch-label">Offensive Development:</span>
+  <span class="dir">C/C++</span> - Shellcode loaders, malware development
+  <span class="dir">Evasion</span> - DLL hijacking, sideloaders, process injection
+  <span class="dir">Tradecraft</span> - AV/EDR bypass, AMSI evasion, unhooking
+
 <span class="neofetch-label">Tooling:</span>
   Cobalt Strike, Impacket, BloodHound, Rubeus, Mimikatz
   Burp Suite, Nmap, CrackMapExec, Responder
 
 <span class="neofetch-label">Other:</span>
   Windows internals, Linux administration, scripting (Python, Go, Bash)
-  Malware development, evasion techniques, C2 infrastructure
+  C2 infrastructure, custom implant development
 
 <span class="output-info">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>`;
     },
