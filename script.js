@@ -173,7 +173,8 @@ const commands = {
   Burp Suite, Nmap, CrackMapExec, Responder
 
 <span class="neofetch-label">Other:</span>
-  Windows internals, Linux administration, scripting (Python, Go, Bash)
+  Windows internals, Linux administration
+  Python, C, Go, Bash
   C2 infrastructure, custom implant development
 
 <span class="output-info">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>`;
