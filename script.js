@@ -33,20 +33,41 @@ const bingBongLogo = `
    * BING BONG! *
    * BING BONG! *`;
 
-// Boot sequence
+// Boot sequence with animation
 function boot() {
+    // Show banner first
+    appendOutput('<div class="boot-banner"><img src="banner.jpg" alt="ineffective coder banner"></div>');
+
     const bootLines = [
-        '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started Portfolio Terminal Service.</span>',
-        '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Reached target User Shell.</span>',
-        ''
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Reached target Local File Systems.</span>', delay: 100 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started Network Manager.</span>', delay: 200 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started OpenSSH Daemon.</span>', delay: 300 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started D-Bus System Message Bus.</span>', delay: 400 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Listening on CUPS Scheduler.</span>', delay: 500 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started Getty on tty1.</span>', delay: 600 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Reached target Multi-User System.</span>', delay: 700 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Started Portfolio Terminal Service.</span>', delay: 850 },
+        { text: '<span class="boot-line">[  <span class="boot-ok">OK</span>  ] Reached target Graphical Interface.</span>', delay: 1000 },
+        { text: '', delay: 1100 },
+        { text: '<span class="boot-welcome">Welcome to <span class="user">bingbong</span> - Arch Linux (kernel 6.12.4-arch1-1)</span>', delay: 1200 },
+        { text: '', delay: 1300 },
+        { text: '<span class="output-info">Type <span class="dir">help</span> for available commands. Try <span class="dir">about</span> or <span class="dir">neofetch</span> to get started.</span>', delay: 1400 },
+        { text: '', delay: 1500 }
     ];
 
-    bootLines.forEach(line => {
-        appendOutput(line);
-    });
+    // Disable input during boot
+    commandInput.disabled = true;
 
-    appendOutput('<span class="output-info">Type <span class="dir">help</span> for available commands.</span>');
-    appendOutput('');
+    bootLines.forEach(({ text, delay }) => {
+        setTimeout(() => {
+            appendOutput(text);
+            // Enable input after last line
+            if (delay === 1500) {
+                commandInput.disabled = false;
+                commandInput.focus();
+            }
+        }, delay);
+    });
 }
 
 // Append output to terminal
