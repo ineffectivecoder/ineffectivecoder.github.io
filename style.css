@@ -1,0 +1,385 @@
+/* Arch Linux Terminal Portfolio - The Rice */
+
+:root {
+    --bg-primary: #141414;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #e6e6e6;
+    --text-secondary: #a0a0a0;
+    --arch-blue: #1793d1;
+    --prompt-pink: #ff7edb;
+    --prompt-cyan: #36f9f6;
+    --prompt-purple: #b084eb;
+    --error-red: #fe4450;
+    --star-yellow: #fede5d;
+    --neon-orange: #f97e72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Fira Code', 'Terminus', 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#terminal {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#output {
+    flex: 1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#output .line {
+    margin-bottom: 2px;
+}
+
+#input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+#prompt {
+    white-space: nowrap;
+    margin-right: 8px;
+}
+
+.user {
+    color: var(--prompt-pink);
+    font-weight: 500;
+    text-shadow: 0 0 10px var(--prompt-pink);
+}
+
+.at {
+    color: var(--star-yellow);
+    text-shadow: 0 0 8px var(--star-yellow);
+}
+
+.host {
+    color: var(--prompt-cyan);
+    font-weight: 500;
+    text-shadow: 0 0 10px var(--prompt-cyan);
+}
+
+.path {
+    color: var(--prompt-purple);
+    font-weight: 500;
+    text-shadow: 0 0 8px var(--prompt-purple);
+}
+
+.dollar {
+    color: var(--text-primary);
+    margin-left: 4px;
+}
+
+#command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: inherit;
+    caret-color: var(--text-primary);
+}
+
+#command-input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
+
+/* Output styling */
+.output-command {
+    color: var(--text-primary);
+}
+
+.output-prompt {
+    display: inline;
+}
+
+.output-prompt .user {
+    color: var(--prompt-pink);
+    text-shadow: 0 0 10px var(--prompt-pink);
+}
+
+.output-prompt .host {
+    color: var(--prompt-cyan);
+    text-shadow: 0 0 10px var(--prompt-cyan);
+}
+
+.output-prompt .path {
+    color: var(--prompt-purple);
+    text-shadow: 0 0 8px var(--prompt-purple);
+}
+
+.output-error {
+    color: var(--error-red);
+}
+
+.output-info {
+    color: var(--text-secondary);
+}
+
+.output-success {
+    color: var(--prompt-cyan);
+}
+
+/* Directory styling */
+.dir {
+    color: var(--arch-blue);
+    font-weight: 500;
+}
+
+.file {
+    color: var(--text-primary);
+}
+
+/* Neofetch styling */
+.neofetch-container {
+    display: flex;
+    gap: 24px;
+    margin: 8px 0;
+}
+
+.neofetch-logo {
+    color: #e85d9a;
+    line-height: 1.2;
+    white-space: pre;
+    font-size: 12px;
+}
+
+.neofetch-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6;
+}
+
+.neofetch-label {
+    color: var(--arch-blue);
+    font-weight: 500;
+}
+
+.neofetch-value {
+    color: var(--text-primary);
+}
+
+.neofetch-separator {
+    color: var(--text-secondary);
+    margin: 4px 0;
+    letter-spacing: -1px;
+}
+
+.neofetch-colors {
+    display: flex;
+    gap: 0;
+    margin-top: 8px;
+}
+
+.neofetch-color-block {
+    width: 24px;
+    height: 16px;
+}
+
+/* Projects styling */
+.repo-item {
+    margin: 4px 0;
+}
+
+.repo-name {
+    color: var(--arch-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.repo-name:hover {
+    text-decoration: underline;
+}
+
+.repo-dots {
+    color: var(--text-secondary);
+}
+
+.repo-desc {
+    color: var(--text-secondary);
+}
+
+.repo-stars {
+    color: var(--star-yellow);
+}
+
+/* About profile card */
+.about-container {
+    display: flex;
+    gap: 24px;
+    margin: 12px 0;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--arch-blue);
+    border-radius: 4px;
+}
+
+.about-avatar {
+    flex-shrink: 0;
+}
+
+.about-avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    border: 2px solid var(--arch-blue);
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(23, 147, 209, 0.3);
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.about-name {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.about-handle {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+
+.about-title {
+    color: var(--arch-blue);
+    font-size: 0.95em;
+}
+
+.about-certs {
+    display: flex;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.cert {
+    background: linear-gradient(135deg, #fb4934 0%, #cc241d 100%);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.cert-expired {
+    background: linear-gradient(135deg, #6b6b6b 0%, #4a4a4a 100%);
+    color: #a0a0a0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.about-separator {
+    color: var(--text-secondary);
+    opacity: 0.5;
+    letter-spacing: -2px;
+}
+
+.about-bio {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.about-bio p {
+    margin: 2px 0;
+}
+
+.about-links {
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-avatar img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Boot sequence */
+.boot-line {
+    color: var(--text-secondary);
+}
+
+.boot-ok {
+    color: var(--prompt-cyan);
+    text-shadow: 0 0 8px var(--prompt-cyan);
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--arch-blue);
+    color: var(--bg-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--arch-blue);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    #terminal {
+        padding: 12px;
+    }
+
+    .neofetch-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .neofetch-logo {
+        font-size: 10px;
+    }
+}
