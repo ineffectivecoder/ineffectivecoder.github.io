@@ -150,7 +150,7 @@ const commands = {
     },
 
     skills: () => {
-        return `<span class="output-info">━━━━━━━━━━━━━ Skills & Expertise ━━━━━━━━━━━━━</span>
+        return `<span class="skill-header">━━━━━━━━━━━━━ Skills & Expertise ━━━━━━━━━━━━━</span>
 
 <span class="neofetch-label">Certifications:</span>
   <span class="cert">OSCP</span>  Offensive Security Certified Professional
@@ -170,17 +170,17 @@ const commands = {
   <span class="dir">Reverse Engineering</span> - Binary Ninja, malware analysis
 
 <span class="neofetch-label">Tooling:</span>
-  Cobalt Strike, Impacket, BloodHound, Rubeus, Mimikatz
-  Burp Suite, Nmap, CrackMapExec, Responder
+  <span class="tool-red">Cobalt Strike</span>, <span class="tool-yellow">Impacket</span>, <span class="tool-red">BloodHound</span>, <span class="tool-yellow">Rubeus</span>, <span class="tool-pink">Mimikatz</span>
+  <span class="tool-orange">Burp Suite</span>, <span class="tool-cyan">Nmap</span>, <span class="tool-red">CrackMapExec</span>, <span class="tool-purple">Responder</span>
 
 <span class="neofetch-label">Languages:</span>
   <span class="lang-python">Python</span>, <span class="lang-c">C</span>, <span class="lang-go">Go</span>, <span class="lang-bash">Bash</span>
 
 <span class="neofetch-label">Other:</span>
-  Windows internals, Linux administration
-  C2 infrastructure, custom implant development
+  <span class="user">Windows internals</span>, <span class="host">Linux administration</span>
+  <span class="dir">C2 infrastructure</span>, <span class="dir">custom implant development</span>
 
-<span class="output-info">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>`;
+<span class="skill-header">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>`;
     },
 
     neofetch: () => {

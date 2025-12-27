@@ -169,6 +169,43 @@ body {
     font-weight: 500;
 }
 
+/* Tool colors */
+.tool-red {
+    color: #fe4450;
+    font-weight: 500;
+}
+
+.tool-yellow {
+    color: #fede5d;
+    font-weight: 500;
+}
+
+.tool-pink {
+    color: #ff7edb;
+    font-weight: 500;
+}
+
+.tool-orange {
+    color: #f97e72;
+    font-weight: 500;
+}
+
+.tool-cyan {
+    color: #36f9f6;
+    font-weight: 500;
+}
+
+.tool-purple {
+    color: #b084eb;
+    font-weight: 500;
+}
+
+/* Skill header */
+.skill-header {
+    color: var(--prompt-pink);
+    text-shadow: 0 0 8px var(--prompt-pink);
+}
+
 /* Neofetch styling */
 .neofetch-container {
     display: flex;
