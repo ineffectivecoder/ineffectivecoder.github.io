@@ -148,6 +148,27 @@ body {
     color: var(--text-primary);
 }
 
+/* Language colors matching logos */
+.lang-python {
+    color: #3776ab;
+    font-weight: 500;
+}
+
+.lang-c {
+    color: #a8b9cc;
+    font-weight: 500;
+}
+
+.lang-go {
+    color: #00add8;
+    font-weight: 500;
+}
+
+.lang-bash {
+    color: #4eaa25;
+    font-weight: 500;
+}
+
 /* Neofetch styling */
 .neofetch-container {
     display: flex;

@@ -173,7 +173,7 @@ const commands = {
   Burp Suite, Nmap, CrackMapExec, Responder
 
 <span class="neofetch-label">Languages:</span>
-  <span class="dir">Python</span>, <span class="dir">C</span>, <span class="dir">Go</span>, <span class="dir">Bash</span>
+  <span class="lang-python">Python</span>, <span class="lang-c">C</span>, <span class="lang-go">Go</span>, <span class="lang-bash">Bash</span>
 
 <span class="neofetch-label">Other:</span>
   Windows internals, Linux administration
