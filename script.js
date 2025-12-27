@@ -167,6 +167,7 @@ const commands = {
   <span class="dir">C/C++</span> - Shellcode loaders, malware development
   <span class="dir">Evasion</span> - DLL hijacking, sideloaders, process injection
   <span class="dir">Tradecraft</span> - AV/EDR bypass, AMSI evasion, unhooking
+  <span class="dir">Reverse Engineering</span> - Binary Ninja, malware analysis
 
 <span class="neofetch-label">Tooling:</span>
   Cobalt Strike, Impacket, BloodHound, Rubeus, Mimikatz
